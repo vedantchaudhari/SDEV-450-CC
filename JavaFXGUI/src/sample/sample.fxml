@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <VBox alignment="CENTER">
+            <Label style="-fx-font-weight: bold; -fx-font-size: 24px; -fx-font-style: italic;" text="Binary Tree" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-font-style: italic;" text="Perform Operations on a Binary Tree" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-font-style: italic;" text="Click the Make Tree Button to Begin" />
+        </VBox>
+    </top>
+    <left>
+        <VBox>
+            <TextArea id="textArea" fx:id="randomNumbersTextArea" prefWidth="200.0" promptText="Random Numbers will Appear Here" wrapText="true" xmlns:fx="http://javafx.com/fxml" />
+            <HBox spacing="10.0">
+                <Button onAction="#handleMakeTree" text="Make Tree" />
+                <Button onAction="#handleClear" text="Clear" />
+                <Button onAction="#handleExit" text="Exit" />
+                <Button onAction="#handleDelete" text="Delete" />
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+            </HBox>
+         <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="false">
+            <image>
+               <Image url="@../capture.png" />
+            </image>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </ImageView>
+        </VBox>
+    </left>
+   <center>
+      <TextArea fx:id="bstNumbersArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
